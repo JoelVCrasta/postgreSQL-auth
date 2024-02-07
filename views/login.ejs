@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="form">
+      <h2>Login</h2>
+      <form action="/api/users/login" method="post">
+        <div class="form-grp">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-grp">
+          <label for="password"> Password </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div>
+          <button type="submit" class="submit-btn">Login</button>
+        </div>
+        <p>Dont have an account <a href="/signup">SignUp</a></p>
+      </form>
+    </div>
+  </body>
+</html>

@@ -34,7 +34,8 @@ const signup = async (req, res) => {
       });
       console.log('user', JSON.stringify(newUser, null, 2));
       console.log('token', token);
-      return res.status(201).send(newUser);
+      //return res.status(201).send(newUser);
+      res.redirect('/');
     } else {
       res.status(409).send('Error creating user');
     }
@@ -72,8 +73,8 @@ const login = async (req, res) => {
         });
         console.log('user', JSON.stringify(user, null, 2));
         console.log('token', token);
-
-        return res.status(201).send(user);
+        //return res.status(201).send(user);
+        res.redirect('/');
       } else {
         return res.status(401).send('authentication failed');
       }
